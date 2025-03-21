@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquina de Conversão</title>
+</head>
+
+<body>
+    <h1>SPTecher´s Machine</h1>
+    <br>
+
+    <h3>Digite um número decimal</h3>
+    <input id="inpt_numero" placeholder="Digite um número">
+    <br>
+
+    <button onclick="converter()">Converter</button>
+
+    <h3>Resultados:</h3>
+
+    <p>Octal:</p>
+    <div id="octal"></div>
+
+    <p>Hexadecimal:</p>
+    <div id="hexadecimal"></div>
+
+    <p>Binario:</p>
+    <div id="binario"></div>
+
+
+    <script>
+        function converter() {
+            var decimal = Number(inpt_numero.value);
+
+            octal.innerHTML = decimal.toString(8);
+            hexadecimal.innerHTML = decimal.toString(16);
+            binario.innerHTML = decimal.toString(2);
+        }
+    </script>
+</body>
+
+</html>
